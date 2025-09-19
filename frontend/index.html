@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepGuard AI - Advanced Deepfake Detector</title>
+    
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="DeepGuard AI - Advanced deepfake detection technology protecting digital authenticity in the modern world.">
+    <meta name="keywords" content="deepfake, detection, AI, artificial intelligence, image analysis, fraud prevention">
+    <meta name="author" content="DeepGuard AI Team">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="DeepGuard AI - Deepfake Detection">
+    <meta property="og:description" content="Advanced deepfake detection technology protecting digital authenticity.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/og-image.jpg">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DeepGuard AI - Deepfake Detection">
+    <meta name="twitter:description" content="Advanced deepfake detection technology protecting digital authenticity.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#8b5cf6">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h2>DeepGuard AI</h2>
+            <p>Initializing advanced detection systems...</p>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <div class="shape shape4"></div>
+            <div class="shape shape5"></div>
+            <div class="shape shape6"></div>
+        </div>
+        
+        <!-- Particle System -->
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>DeepGuard AI</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">DeepGuard AI</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Advanced Deepfake Detection</h2>
+                    <p class="hero-description">
+                        Protecting digital authenticity with cutting-edge artificial intelligence. 
+                        Our advanced neural networks can detect deepfake manipulation with 94%+ accuracy.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" id="totalScans">1,247</div>
+                            <div class="stat-label">Images Analyzed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="accuracy">94.2%</div>
+                            <div class="stat-label">Accuracy Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="avgTime">2.3s</div>
+                            <div class="stat-label">Avg Processing</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Device Mockup -->
+                <div class="hero-device">
+                    <div class="device-mockup">
+                        <div class="device-screen">
+                            <div class="demo-interface">
+                                <div class="demo-header">
+                                    <div class="demo-logo">🛡️</div>
+                                    <div class="demo-title">AI Analysis</div>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="demo-image"></div>
+                                    <div class="demo-result">
+                                        <div class="result-icon success">✓</div>
+                                        <div class="result-text">Authentic Image</div>
+                                        <div class="confidence-bar">
+                                            <div class="confidence-fill" style="width: 87%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Application Section -->
+        <section class="app-section">
+            <div class="container">
+                <div class="app-grid">
+                    <!-- Upload Section -->
+                    <div class="upload-section" id="uploadSection">
+                        <div class="section-header">
+                            <div class="section-title">
+                                <i class="fas fa-cloud-upload-alt section-icon"></i>
+                                <h2>Upload Image</h2>
+                            </div>
+                            <p class="section-description">
+                                Upload an image to analyze for deepfake detection
+                            </p>
+                        </div>
+
+                        <!-- Upload Area -->
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-content">
+                                <div class="upload-icon-wrapper">
+                                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                    <div class="upload-pulse"></div>
+                                </div>
+                                <div class="upload-text">
+                                    <h3 id="uploadTitle">Drag & drop an image here</h3>
+                                    <p id="uploadSubtext">or click to select from your device</p>
+                                </div>
+                                <button class="upload-btn" id="uploadBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Choose Image
+                                </button>
+                            </div>
+                            <input type="file" id="fileInput" accept="image/*" hidden>
+                        </div>
+
+                        <!-- File Preview -->
+                        <div class="file-preview" id="filePreview" style="display: none;">
+                            <div class="preview-container">
+                                <div class="preview-image-wrapper">
+                                    <img id="previewImage" class="preview-image" alt="Preview">
+                                    <button class="remove-file-btn" id="removeFileBtn">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <div class="file-details">
+                                    <div class="file-info">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <div class="file-meta">
+                                            <h4 class="file-name" id="fileName"></h4>
+                                            <div class="file-stats">
+                                                <span class="file-size" id="fileSize"></span>
+                                                <span class="file-type" id="fileType"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="analyze-btn" id="analyzeBtn">
+                                        <i class="fas fa-search btn-icon"></i>
+                                        Analyze Image
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upload Guidelines -->
+                        <div class="upload-guidelines">
+                            <h4>Guidelines for Best Results</h4>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-check-circle guideline-icon"></i>
+                                    Use clear, high-resolution images
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle guideline-icon"></i>
+                                    Ensure faces are clearly visible
+                                </li>
+                                <li>
+                                    <i class="fas fa-exclamation-circle guideline-icon warning"></i>
+                                    Avoid heavily compressed or low-quality images
+                                </li>
+                                <li>
+                                    <i class="fas fa-info-circle guideline-icon info"></i>
+                                    Supported formats: JPG, PNG, GIF, WebP (Max: 10MB)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div class="results-section" id="resultsSection">
+                        <div class="section-header">
+                            <div class="section-title">
+                                <i class="fas fa-chart-line section-icon"></i>
+                                <h2>Analysis Results</h2>
+                            </div>
+                            <p class="section-description">
+                                Detailed deepfake detection analysis and insights
+                            </p>
+                        </div>
+
+                        <div class="results-content" id="resultsContent">
+                            <!-- Empty State -->
+                            <div class="empty-state" id="emptyState">
+                                <div class="empty-content">
+                                    <i class="fas fa-microscope empty-icon"></i>
+                                    <h3>No Analysis Yet</h3>
+                                    <p>Upload an image to begin deepfake detection analysis</p>
+                                    <div class="features-preview">
+                                        <div class="feature-item">
+                                            <i class="fas fa-shield-alt feature-icon"></i>
+                                            <span>Advanced AI Detection</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-eye feature-icon"></i>
+                                            <span>Detailed Analysis</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-clock feature-icon"></i>
+                                            <span>Real-time Results</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Loading State -->
+                            <div class="loading-state" id="loadingState" style="display: none;">
+                                <div class="loading-animation">
+                                    <div class="loading-spinner">
+                                        <div class="spinner-ring"></div>
+                                        <div class="spinner-ring"></div>
+                                        <div class="spinner-ring"></div>
+                                    </div>
+                                    <h3>Analyzing Image...</h3>
+                                    <p>Our AI is examining the image for signs of manipulation</p>
+                                    <div class="analysis-steps" id="analysisSteps">
+                                        <div class="step active">
+                                            <div class="step-dot"></div>
+                                            <span>Preprocessing image</span>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-dot"></div>
+                                            <span>Running AI analysis</span>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-dot"></div>
+                                            <span>Generating results</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar-fill" id="progressBar"></div>
+                                    </div>
+                                    <div class="progress-text" id="progressText">0%</div>
+                                </div>
+                            </div>
+
+                            <!-- Analysis Result -->
+                            <div class="analysis-result" id="analysisResult" style="display: none;">
+                                <div class="result-header">
+                                    <div class="result-icon-wrapper">
+                                        <i class="result-icon" id="resultIcon"></i>
+                                    </div>
+                                    <div class="result-title">
+                                        <h3 id="resultTitle"></h3>
+                                        <p class="result-description" id="resultDescription"></p>
+                                    </div>
+                                </div>
+
+                                <!-- Confidence Meter -->
+                                <div class="confidence-section">
+                                    <div class="confidence-header">
+                                        <span class="confidence-label">Confidence Level</span>
+                                        <span class="confidence-value" id="confidenceValue">0%</span>
+                                    </div>
+                                    <div class="confidence-bar-container">
+                                        <div class="confidence-bar" id="confidenceBar"></div>
+                                    </div>
+                                    <div class="confidence-scale">
+                                        <span>Low</span>
+                                        <span>Medium</span>
+                                        <span>High</span>
+                                    </div>
+                                </div>
+
+                                <!-- Risk Assessment -->
+                                <div class="risk-assessment">
+                                    <div class="risk-header">
+                                        <i class="fas fa-eye risk-icon"></i>
+                                        <span>Risk Level</span>
+                                    </div>
+                                    <div class="risk-badge" id="riskBadge">UNKNOWN</div>
+                                </div>
+
+                                <!-- Analysis Metrics -->
+                                <div class="analysis-metrics" id="analysisMetrics">
+                                    <div class="metric-item">
+                                        <i class="fas fa-clock metric-icon"></i>
+                                        <div class="metric-content">
+                                            <span class="metric-label">Processing Time</span>
+                                            <span class="metric-value" id="processingTime">--</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <i class="fas fa-file-alt metric-icon"></i>
+                                        <div class="metric-content">
+                                            <span class="metric-label">File Size</span>
+                                            <span class="metric-value" id="metricFileSize">--</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <i class="fas fa-expand-arrows-alt metric-icon"></i>
+                                        <div class="metric-content">
+                                            <span class="metric-label">Resolution</span>
+                                            <span class="metric-value" id="resolution">--</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <i class="fas fa-robot metric-icon"></i>
+                                        <div class="metric-content">
+                                            <span class="metric-label">Model Version</span>
+                                            <span class="metric-value">v1.0.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Insights Section -->
+                <div class="insights-section" id="insightsSection" style="display: none;">
+                    <div class="insights-grid">
+                        <!-- Technical Analysis -->
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-cogs"></i>
+                                <h3>Technical Analysis</h3>
+                            </div>
+                            <div class="insight-content" id="technicalAnalysis">
+                                <div class="insight-item">
+                                    <span class="insight-label">Image Quality:</span>
+                                    <span class="insight-value" id="imageQuality">High</span>
+                                </div>
+                                <div class="insight-item">
+                                    <span class="insight-label">Edge Consistency:</span>
+                                    <span class="insight-value" id="edgeConsistency">Good</span>
+                                </div>
+                                <div class="insight-item">
+                                    <span class="insight-label">Compression Artifacts:</span>
+                                    <span class="insight-value" id="compressionArtifacts">Low</span>
+                                </div>
+                                <div class="insight-item">
+                                    <span class="insight-label">Noise Pattern:</span>
+                                    <span class="insight-value" id="noisePattern">Natural</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detection Details -->
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-search"></i>
+                                <h3>Detection Details</h3>
+                            </div>
+                            <div class="insight-content" id="detectionDetails">
+                                <div class="detection-method">
+                                    <strong>Analysis Method:</strong>
+                                    <p>Convolutional Neural Network with attention mechanisms</p>
+                                </div>
+                                <div class="detection-features">
+                                    <strong>Key Features Analyzed:</strong>
+                                    <ul id="analyzedFeatures">
+                                        <li>Facial landmarks consistency</li>
+                                        <li>Temporal coherence patterns</li>
+                                        <li>Compression artifact analysis</li>
+                                        <li>Frequency domain analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommendation -->
+                        <div class="insight-card">
+                            <div class="insight-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>Recommendation</h3>
+                            </div>
+                            <div class="insight-content" id="recommendation">
+                                <div class="recommendation-text">
+                                    <p id="recommendationMessage">Based on the analysis, this image appears to be authentic with no signs of deepfake manipulation.</p>
+                                </div>
+                                <div class="recommendation-actions">
+                                    <button class="action-btn" id="shareResultBtn">
+                                        <i class="fas fa-share-alt"></i>
+                                        Share Result
+                                    </button>
+                                    <button class="action-btn secondary" id="downloadReportBtn">
+                                        <i class="fas fa-download"></i>
+                                        Download Report
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>DeepGuard AI</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced deepfake detection technology protecting digital authenticity 
+                        in the modern world. Built with cutting-edge AI and machine learning.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#api">API</a></li>
+                            <li><a href="#documentation">Documentation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#press">Press</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#research">Research</a></li>
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#status">System Status</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#security">Security</a></li>
+                            <li><a href="#compliance">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p class="copyright">© 2024 DeepGuard AI. All rights reserved.</p>
+                    <p class="disclaimer">This is a demonstration project for educational purposes.</p>
+                </div>
+                
+                <div class="footer-tech">
+                    <div class="tech-badge">
+                        <span class="tech-label">Powered by</span>
+                        <div class="tech-stack">
+                            <span class="tech-item">TensorFlow</span>
+                            <span class="tech-item">WebGL</span>
+                            <span class="tech-item">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Modal for sharing results -->
+    <div id="shareModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Share Analysis Result</h3>
+                <button class="modal-close" id="closeShareModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Share this analysis result:</p>
+                <div class="share-options">
+                    <button class="share-btn" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="share-btn" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </button>
+                    <button class="share-btn" data-platform="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </button>
+                    <button class="share-btn" data-platform="copy">
+                        <i class="fas fa-copy"></i>
+                        Copy Link
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
